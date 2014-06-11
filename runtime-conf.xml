@@ -1,0 +1,14 @@
+<config>
+<propel>
+<datasources default="Raum">
+<datasource id="Raum">
+<adapter>mysql</adapter>
+<connection>
+<dsn>mysql:host=localhost;dbname=Raum</dsn>
+<user>root</user>
+<password>root</password>
+</connection>
+</datasource>
+</datasources>
+</propel>
+</config>

@@ -1,0 +1,20 @@
+<database name="Raum" defaultIdMethod="native">
+<table name="benutzer" phpName="Benutzer">
+<column name="bname" type="varchar" size="8" required="true" primaryKey="true"/>
+<column name="passwort" type="varchar" size="8" required="true"/>
+<column name="istAdmin" type="boolean" defaultValue="true"/>
+</table>
+
+<table name="jahrgang" phpName="Jahrgang">
+<column name="jbez" type="varchar" size="6" required="true" primaryKey="true"/>
+</table>
+
+<table name="raum" phpName="Raum">
+<column name="rnr" type="varchar" size="6" required="true" primaryKey="true"/>
+<column name="hatbeamer" type="boolean" defaultValue="true"/>
+<column name="jbez" type="varchar" size="6" required="true"/>
+<foreign-key foreignTable="jahrgang">
+<reference local="jbez" foreign="jbez"/>
+</foreign-key>
+</table>
+</database>
